@@ -56,7 +56,7 @@ public class Main {
     static class TodoEncryptorRunnable implements Runnable {
         private final int id;
 //        private static int callsTotal = 0;
-        public static final AtomicInteger callsTotal = new AtomicInteger(0);
+        public static final AtomicInteger callsTotal      = new AtomicInteger(0);
         public static final AtomicInteger encryptionTotal = new AtomicInteger(0);
 
         public TodoEncryptorRunnable(int id) {
@@ -131,10 +131,10 @@ public class Main {
 
         executor.shutdown();
 
-        JFrame frame = new JFrame("Window");
-        frame.setSize(550, 550);
-        frame.add(new CustomCanvas());
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        JFrame frame = new JFrame("Window");
+//        frame.setSize(550, 550);
+//        frame.add(new CustomCanvas());
+//        frame.setVisible(true);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
