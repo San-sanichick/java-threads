@@ -86,6 +86,7 @@ public class Main {
                 FileWriterSync fileWriterSync = FileWriterSync.getInstance();
                 try {
                     fileWriterSync.writeFile("todos.txt", String.valueOf(todo));
+                    System.out.println("Wrote todo to file from thread " + this.id);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -100,6 +101,7 @@ public class Main {
                     byte[] encryptedTodo = cipher.doFinal(todoBytes);
 
                     fileWriterSync.writeFile("todos_enc.txt", encryptedTodo);
+                    System.out.println("Wrote encrypted todo to file from thread " + this.id);
 
                     encryptionTotal.incrementAndGet();
 
